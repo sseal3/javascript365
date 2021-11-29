@@ -1,0 +1,268 @@
+body {
+  background: white;
+  height: 100%;
+  width: 100%;
+}
+
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 50px;
+  width: 500px;
+  height: 500px;
+}
+.arm {
+  position: absolute;
+  top: -30%;
+  left: 27%;
+  height: 47%;
+  width: 20.2%;
+  background: #ffa978;
+  transform: rotate(-5deg);
+}
+.arm.right {
+  left: 263px;
+  transform: rotate(5deg);
+}
+.arm.right::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 99.5%;
+  background: #ffa978;
+  transform-origin: bottom;
+  transform: rotate(-5deg);
+}
+.arm.left::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100.5%;
+  background: #ffa978;
+  transform-origin: bottom;
+  transform: rotate(5deg);
+}
+
+.hand {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  height: 60%;
+  width: 40%;
+  transform: rotate(3deg);
+}
+.hand.right {
+  left: 50%;
+  height: 60%;
+  width: 40%;
+  transform: rotate(-3deg);
+}
+.palm {
+  position: absolute;
+  height: 60%;
+  width: 50%;
+  right: 10%;
+  top: -10%;
+  background: #ffa978;
+  transform: rotate(5deg);
+}
+.palm.right::after {
+  content: '';
+  position: absolute;
+  background: #ffa978;
+  height: 100%;
+  width: 80%;
+  right: 38%;
+  transform: rotate(15deg);
+}
+.palm.left::after {
+  content: '';
+  position: absolute;
+  background: #ffa978;
+  height: 100%;
+  width: 80%;
+  left: 38%;
+  transform: rotate(-15deg);
+}
+.palm.right {
+  transform: rotate(-5deg);
+  left: 10%;
+}
+.finger {
+  position: absolute;
+  height: 75%;
+  width: 15%;
+  right: 5%;
+  top: 2%;
+  background: #ffa978;
+  border-radius: 0px 0px 40px 40px;
+  z-index: 3;
+}
+.finger.pinkie-l {
+  right: 6%;
+  top: -8%;
+  height: 85%;
+}
+.finger.pinkie-r {
+  left: 6%;
+  top: -8%;
+  height: 85%;
+}
+.finger.ring-r {
+  left: 23.5%;
+  top: 15%;
+  transform: rotate(-3deg);
+}
+.finger.ring-l {
+  right: 23.5%;
+  top: 15%;
+  transform: rotate(3deg);
+}
+.finger.mid-r {
+  left: 42%;
+  top: 18%;
+  transform: rotate(-6deg);
+}
+.finger.mid-l {
+  right: 42%;
+  top: 18%;
+  transform: rotate(6deg);
+}
+.finger.index-r {
+  left: 58%;
+  top: 10%;
+  transform: rotate(-9deg);
+}
+.finger.index-l {
+  right: 58%;
+  top: 10%;
+  transform: rotate(9deg);
+}
+.finger.thumb-r {
+  left: 67%;
+  height: 60%;
+  top: -7%;
+  transform: rotate(-35deg);
+  z-index: 2;
+}
+.finger.thumb-r::after {
+  content: '';
+  position: absolute;
+  left: -105%;
+  height: 50%;
+  width: 200%;
+  top: 8%;
+  background: #ffa978;
+  z-index: 1;
+}
+.finger.thumb-r::before {
+  content: '';
+  position: absolute;
+  left: -100%;
+  height: 50%;
+  width: 80%;
+  top: 50%;
+  border-radius: 50%;
+  background: white;
+  transform: rotate(20deg);
+  z-index: 2;
+}
+.finger.thumb-l {
+  right: 67%;
+  height: 60%;
+  top: -7%;
+  transform: rotate(35deg);
+  z-index: 2;
+}
+.finger.thumb-l::after {
+  content: '';
+  position: absolute;
+  right: -105%;
+  height: 50%;
+  width: 200%;
+  top: 8%;
+  background: #ffa978;
+  z-index: 1;
+}
+.finger.thumb-l::before {
+  content: '';
+  position: absolute;
+  right: -100%;
+  height: 50%;
+  width: 80%;
+  top: 50%;
+  border-radius: 50%;
+  background: white;
+  transform: rotate(-20deg);
+  z-index: 2;
+}
+.bar-soap {
+  position: absolute;
+  top: 28%;
+  left: 28%;
+  height: 28%;
+  width: 41%;
+  background: #eba44c;
+  border-radius: 10px;
+  border: 8px solid white;
+  z-index: 5;
+}
+.heart {
+  position: absolute;
+  background: red;
+  left: 34%;
+  top: 30%;
+  height: 60px;
+  width: 60px;
+  transform: rotate(45deg);
+  border-bottom: 8px solid white;
+  border-right: 8px solid white;
+}
+
+.heart::before {
+  content: '';
+  position: absolute;
+  width: 91%;
+  height: 91%;
+  border-radius: 100%;
+  background: inherit;
+  top: -51%;
+  left: -4.5%;
+  border: 8px solid white;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 91%;
+  height: 91%;
+  border-radius: 100%;
+  background: inherit;
+  top: -4.5%;
+  left: -50%;
+  border: 8px solid white;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+.heart.outline {
+  background: white;
+  left: 30%;
+  top: 25%;
+  height: 78px;
+  width: 78px;
+}
+.heart.outline::before {
+  background: white;
+}
+.heart.outline::after {
+  background: white;
+}
+
+.changer {
+  position: relative;
+  margin: auto;
+  display: block;
+  padding-left: 50px;
+  width: 500px;
+  height: 500px;
+}
