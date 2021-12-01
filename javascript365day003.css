@@ -1,0 +1,122 @@
+body {
+  background: white;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.box {
+  position: relative;
+  margin: auto;
+  margin-top: 8%;
+  display: block;
+  width: 400px;
+  height: 400px;
+}
+.box-ani {
+  animation: hit-back 5s steps(5, end) infinite;
+  animation-delay: .5s;
+}
+
+.board {
+  height: 15px;
+  width: 40%;
+  position: absolute;
+  bottom: 80px;
+  background: #C19A6B;
+  border-radius: 2px;
+}
+.board-ani {
+  animation: hit-board 5s steps(5, end) infinite;
+  animation-delay: .5s;
+}
+
+.nail {
+  height: 100px;
+  bottom: 0px;
+  width: 8px;
+  background: black;
+  position: absolute;
+  left: calc(20% - 4px);
+}
+.nail::before {
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  background: inherit;
+  bottom:-10px;
+  clip-path: polygon(0 0, 100% 0, 90% 55%, 50% 100%, 10% 55%);
+
+}
+.nail::after {
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 300%;
+  background: inherit;
+  top: -5%;
+  left: -100%;
+  border-radius: 5px;
+}
+
+.mallet-box {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  bottom: 80px;
+  left: 130px;
+}
+.mallet-ani {
+  animation: hit-it .5s infinite alternate ease-in;
+}
+
+.mallet {
+  height: 200px;
+  top: -70px;
+  right: 0px;
+  width: 20px;
+  background: #654321;
+  position: absolute;
+  border-radius: 4px;
+}
+
+.mallet::after {
+  content: '';
+  position: absolute;
+  height: 60px;
+  width: 600%;
+  background: #A9A9A9;
+  top: -40px;
+  left: -250%;
+  border-radius: 5px;
+}
+
+@keyframes hit-it {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes hit-board {
+  from {
+    bottom: 0px;
+  }
+
+  to {
+    bottom: 100px;
+  }
+}
+@keyframes hit-back {
+  from {
+    top: 0px;
+  }
+
+  to {
+    top: 100px;
+  }
+}
